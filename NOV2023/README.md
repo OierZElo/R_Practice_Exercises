@@ -78,6 +78,7 @@ The data frame named data contains a column named dates in text format (characte
 Exercise 4: Tibble Package (1p)
 
 Having the following data about childhood:
+
 <img width="325" height="182" alt="image" src="https://github.com/user-attachments/assets/e5aae5cf-4df5-4006-a8d4-3619ef201126" />
 
     Create that tibble using 2 different ways.
