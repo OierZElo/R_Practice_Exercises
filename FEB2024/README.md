@@ -1,7 +1,3 @@
-I apologize for the misunderstanding. I provided the R code in a code block instead of a general Markdown format.
-
-Here is the conversion of the Partial Exam into a standard Markdown file suitable for a GitHub repository's README or documentation.
-
 💻 Technical and Scientific Programming - Partial Exam
 
 Date: February 6, 2024 Course: Technical and Scientific Programming
