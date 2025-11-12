@@ -2,7 +2,7 @@ library(lubridate)
 library(stringr)
 library(tibble)
 
-setwd("C:/Users/oier.z/Desktop/R/2023old")
+setwd("C:/Users/oier.z/Desktop/R/NOV2023")
 
 csv <- read.csv("Data.csv")
 
@@ -101,6 +101,53 @@ imc <- c(22, 25, 29, 31)
 
 print(evaluate_health(cholesterol, glucose, arterial_pressure, imc))
 
-#EXERCISE 3
+#EXERCISE 3-1
+cat("\nEXERCISE 3-1\n-----------------------\n")
+tib$Date <- as.Date(dmy_hms(tib$Date))
+print(tib)
 
+#EXERCISE 3-2
+cat("\nEXERCISE 3-2\n-----------------------\n")
+quarters_vector <- quarter(tib$Date)
+print(quarters_vector)
 
+#EXERCISE 3-3
+cat("\nEXERCISE 3-3\n-----------------------\n")
+years <- year(tib$Date)
+print(years)
+
+#EXERCISE 3-3
+cat("\nEXERCISE 3-3\n-----------------------\n")
+tib2 <- tib
+tib2$Qtr <- quarters_vector
+tib2$year <- years
+print(tib2)
+
+#EXERCISE 3-4
+cat("\nEXERCISE 3-4\n-----------------------\n")
+diff_days <-  as.numeric(max(tib$Date) - min(tib$Date))
+print(diff_days %/% 7)
+
+#EXERCISE 4-1
+cat("\nEXERCISE 4-1\n-----------------------\n")
+child_data1 <- tibble(
+  age = c(2, 3, 1),
+  weight = c(28.9, 35.8, 8.9),
+  height = c(78, 67, 50)
+)
+
+child_data2 <- as_tibble(data.frame(
+  age = c(2, 3, 1),
+  weight = c(28.9, 35.8, 8.9),
+  height = c(78, 67, 50)
+))
+
+print(child_data1)
+print(child_data2)
+
+#EXERCISE 4-2
+cat("\nEXERCISE 4-2\n-----------------------\n")
+child_data1[3, 2]
+child_data1[[2]][3]
+child_data1[3, 2][[1]]
+child_data1$weight[3]
